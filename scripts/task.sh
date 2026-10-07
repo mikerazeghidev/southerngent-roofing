@@ -1,19 +1,10 @@
-# Hero tidy: 2-line headline, tighter vertical rhythm, copy column aligned to the site container
+# New service tile photos (roofing, gutters, drainage): SEO filenames, alt text, metadata-free WebP
 set -euo pipefail
 cd "$(dirname "$0")/.."
-grep -q 'Hero tidy (Oct 7, 2026)' public/css/styles.css && { echo 'already applied'; exit 0; }
-cat >> public/css/styles.css <<'EOF'
-
-/* Hero tidy (Oct 7, 2026): 2-line headline, tighter vertical rhythm, copy column aligned to the site container */
-#lp-code-1 .hero{padding:64px 0 150px}
-#lp-code-1 .hero-copy{max-width:720px}
-#lp-code-1 .hero .eyebrow{font-size:15px;letter-spacing:3px;margin:0 0 10px}
-#lp-code-1 .hero h1{font-size:60px;line-height:1.04;margin:0 0 12px}
-#lp-code-1 .hero-sub{font-size:18px;line-height:1.5;max-width:540px;margin:0}
-#lp-code-1 .hero .cta-row{margin:28px 0 0;gap:24px}
-#lp-code-1 .hero .badges{margin-top:30px;gap:16px}
-#lp-code-1 .hero .badges img{height:58px}
-@media (max-width:980px){#lp-code-1 .hero h1{font-size:46px}#lp-code-1 .hero{padding:48px 0 120px}}
-@media (max-width:560px){#lp-code-1 .hero h1{font-size:36px}#lp-code-1 .hero{padding:36px 0 96px}#lp-code-1 .hero .badges img{height:48px}}
-EOF
-tail -3 public/css/styles.css
+[ -s public/images/architectural-asphalt-shingle-roof-alabama.webp ] && { echo 'already applied'; exit 0; }
+curl -fsSL -o /tmp/tiles.tgz 'https://unbounce-mcp-uploads-production-002682819933.s3.us-east-1.amazonaws.com/uploads/unbounce%253A181812/48ec0a7c-269f-486a-9d61-9782cf47c185/tiles.tgz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAQBH7ISVOUIYWXT6B%2F20261007%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261007T195057Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEwaCXVzLWVhc3QtMSJIMEYCIQCAFqxjjT7ScKcLAoqlK1ZvdRcF7Zpkm1FHLRCoWj3gZAIhAO2hm8Ttc2%2Bzhd%2BI8G4klCYu%2F1ktV6BhL2QZGemi9n3xKv0DCBUQABoMMDAyNjgyODE5OTMzIgy9kSvv9oJ1SHU3Wnsq2gN8WTkpdKZBB0veQqhhqTBcJneLYJBEmcGzJ9FAohZ%2FviX1TZo3FxLLgdS20yhnYKPssrubUFg%2FoFRJrQ5XZ1SzfAHkiUDlEUw217V2e%2FbweHepKpgHPATVztx4nZ%2BBJuS3%2B4EY9TKNua09jXufvuyAgsQiH53uHuzJrmvoQuvxuh3Om8VqA9VdGJvieFu2KXlrS2BxUV%2BRFPg9%2B4Uz19PjWPP%2BSrj7WvcJq9Rg%2BhZZuL744IiP1lDHygGkYtGWu5o5VJaV15zufeaY4%2BkH6b53k23O9ItgQMB%2BXLDwVT8XAnpv2%2FEEyASvCGf2JAxkVFbmkF3q2ZeSrY38mAcY80mv6cV7NAGHyK2v0%2Fx8beZ2v%2BwIN7HX8ubkVS13RtpU1Z2z1PXGktgqnfTeG2Clkkl1pN4f%2Bm6UPTmkF%2Fu0Z6XIFbMHuKoqg4PY7SR5qWl4ETrrOXVJaAvMsXDDqjxjXbLsgu5CfV5UbuQ1aZy00bvPmWdSyAbwjf7p%2FSaBBBh%2Fr8mMk9KEA5Ub6yutaPU3GKffw3%2BIVGCSfWIm%2Bx41xtp4OnrAMOXa7SGgxkWTpwKWCHEQPWgRcXj04HxjMy8Q1BjH%2FJvLkHDVKzPvwL4r3vLPMHJmh4%2BRWKBDHpow88Ka1gY6oQF098%2FommS%2FM5GPhYRUr8TJHaLzuMsznvb7Jqj%2Bl5Qd4vatzIIeWti8Vm1JhpFKzLpvdIJyTlrNe0BBXBnlkgvFdQvIXuTj8Ah%2Fz4hYPV8xyG7fY8XO%2FN3nzgWGJSSGH5qN8idTP2kfxvOL49zprZBBqtK6X%2BM8ycx%2FWMj6NEY5fgxHfNcq1X5TnIM%2FjLDrzcpIj%2BO7uILXjZ0fksA2lz2NUA%3D%3D&X-Amz-Signature=ef3aef0e18aebbe8f43a602f5a6b8b783f8b55a14d6b38ecf52c11487cf596d2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'
+echo "e0147b57bdb8c5f2142a4c80408f3ad98971228ceb55e0c2f81087bc44c42fa4  /tmp/tiles.tgz" | sha256sum -c -
+tar xzf /tmp/tiles.tgz
+# the three old tile files are no longer referenced on the homepage (roof-replacement-alabama-home.webp is still used by the storm section)
+rm -f public/images/seamless-gutter-installation-alabama.webp public/images/yard-drainage-solution-alabama.webp
+grep -c 'architectural-asphalt-shingle-roof-alabama' src/pages/index.astro
