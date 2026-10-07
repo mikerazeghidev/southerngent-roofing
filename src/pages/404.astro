@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import { INDEX_HERO } from '../data/site';
+---
+<Base title="Page Not Found | SouthernGent Roofing & Gutters" description="That page doesn't exist. Head back to the SouthernGent Roofing & Gutters homepage." path="/404" hero={INDEX_HERO} noindex>
+  <section class="hero" id="top">
+    <div class="hero-shade"></div>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">404</p>
+        <h1>That Page Blew Off<br>In The Storm</h1>
+        <p class="hero-sub">The page you're looking for isn't here. Head home or get a free quote.</p>
+        <div class="cta-row"><a class="btn btn-blue btn-hero" href="/">Back To Home</a></div>
+      </div>
+    </div>
+  </section>
+</Base>

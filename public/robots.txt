@@ -1,0 +1,3 @@
+# Pre-launch: site is not indexable until domain cutover. Replace with the allow-all version then.
+User-agent: *
+Disallow: /

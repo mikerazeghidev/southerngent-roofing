@@ -1,0 +1,69 @@
+---
+// Page shell: <head> (SEO meta, Open Graph, JSON-LD, fonts, CSS, GTM), header, page content (slot), footer, main.js.
+import { SITE, BRAND, NOINDEX, GTM_ID } from '../data/site';
+import { buildGraph, type ServiceInfo, type Crumb } from '../lib/schema';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogDescription?: string;
+  /** Site-relative path: "/" or "/roof-repair". Drives canonical, og:url and schema ids. */
+  path: string;
+  /** Hero image filename in public/images. Used for og:image and schema primaryImageOfPage. */
+  hero: string;
+  heroAlt?: string;
+  service?: ServiceInfo;
+  breadcrumbs?: Crumb[];
+  crumb?: string;
+  noindex?: boolean;
+}
+const { title, description, ogDescription = description, path, hero, heroAlt = title, service, breadcrumbs = [], crumb, noindex = false } = Astro.props;
+const url = SITE + (path === '/' ? '/' : path);
+const html = await Astro.slots.render('default');
+const graph = buildGraph({ path, title, description, hero, html, service, breadcrumbs, crumb });
+const ogImage = SITE + '/images/' + hero;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+{(NOINDEX || noindex) && <meta name="robots" content="noindex, nofollow">}
+<link rel="canonical" href={url}>
+<meta property="og:type" content="website">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={ogDescription}>
+<meta property="og:url" content={url}>
+<meta property="og:site_name" content={BRAND}>
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:alt" content={heroAlt}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content={ogImage}>
+<meta name="twitter:image:alt" content={heroAlt}>
+<meta name="theme-color" content="#2C160B">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/Rokkitt-600-800.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/Oswald-500-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/Archivo-400-700.woff2" crossorigin>
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="preload" as="image" href={'/images/' + hero} fetchpriority="high">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="application/ld+json" is:inline set:html={JSON.stringify(graph, null, 2)} />
+{GTM_ID && <script is:inline define:vars={{ GTM_ID }}>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTM_ID);</script>}
+</head>
+<body>
+{GTM_ID && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>}
+<div id="lp-code-1">
+<div class="sg">
+<Header />
+<Fragment set:html={html} />
+<Footer />
+</div>
+</div>
+<script is:inline src="/js/main.js"></script>
+</body>
+</html>

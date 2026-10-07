@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets config. Astro builds into ./dist; Cloudflare serves it.
+  // Dashboard build settings: Build command "npm run build", Deploy command "npx wrangler deploy", root "/".
+  "name": "southerngent-roofing",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
