@@ -43,7 +43,8 @@ body{margin:0}
 /* HERO */
 #lp-code-1 .hero{position:relative;background:url('/images/alabama-roofing-crew-hero.webp') center 22%/cover no-repeat;padding:88px 0 216px}
 #lp-code-1 .hero-shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(26,16,5,.84) 0%,rgba(30,18,6,.48) 46%,rgba(40,22,6,.18) 75%),linear-gradient(to bottom,rgba(180,110,30,.12),rgba(120,60,10,.28))}
-#lp-code-1 .hero-in{position:relative;max-width:860px;margin-left:0}
+#lp-code-1 .hero-in{position:relative}
+#lp-code-1 .hero-copy{max-width:640px}
 #lp-code-1 .eyebrow{font-family:'Oswald',sans-serif;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:3.5px;font-size:21px;margin:0 0 8px}
 #lp-code-1 .hero h1{color:var(--cream-2);font-size:80px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;line-height:1.02;text-shadow:0 3px 14px rgba(0,0,0,.4);margin-bottom:10px}
 #lp-code-1 .hero-sub{color:var(--cream-2);font-size:17px;max-width:480px;margin:16px 0 26px}
