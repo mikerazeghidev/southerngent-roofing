@@ -1,0 +1,32 @@
+name: Run task
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/task.sh"
+      - ".github/workflows/run-task.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run task script
+        run: bash scripts/task.sh
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Automated task: $(head -1 scripts/task.sh | sed 's/^# *//')" || echo 'nothing to commit'
+          git push
