@@ -791,3 +791,5 @@ body{margin:0}
 #lp-code-1 .ba-pair .ba-tag{left:8px;top:8px;bottom:auto;transform:none}
 #lp-code-1 .ba-half:first-child img{filter:brightness(.9) saturate(.85)}
 #lp-code-1 .ba-half:first-child::after{content:"";position:absolute;inset:0;background:rgba(20,12,6,.1);pointer-events:none}
+/* aspect fix (Oct 7, 2026): images carry width/height attributes for layout stability; keep them proportional */
+#lp-code-1 .lb-stage img, #lp-code-1 .dr-photo>img:first-child{height:auto}
