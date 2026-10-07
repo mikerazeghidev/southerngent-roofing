@@ -184,12 +184,22 @@ import { INDEX_HERO } from '../data/site';
   </section>
 
   <!-- STORM DAMAGE -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Rain on an architectural asphalt shingle roof in Alabama",
+    "description": "Close-up of steady rain on a charcoal architectural asphalt shingle roof. SouthernGent Roofing & Gutters handles storm damage repair and insurance claims across Huntsville, Birmingham and Alabama.",
+    "thumbnailUrl": "https://www.southerngentroofing.com/images/rain-on-architectural-shingle-roof-alabama.webp",
+    "contentUrl": "https://www.southerngentroofing.com/media/rain-on-architectural-shingle-roof-alabama.mp4",
+    "uploadDate": "2026-10-07",
+    "duration": "PT10S",
+    "publisher": { "@id": "https://www.southerngentroofing.com/#business" }
+  })} />
+
   <section class="storm">
     <div class="wrap storm-in">
       <div class="storm-photo">
-        <img src="/images/roof-replacement-alabama-home.webp" alt="Alabama roof in a storm">
-        <span class="storm-fx" aria-hidden="true"></span>
-        <span class="storm-mhead" aria-hidden="true"><i>Storm Damage?</i><b>We&#8217;re Here<br>To Help.</b></span>
+        <video class="storm-video" muted loop playsinline preload="none" width="720" height="720" poster="/images/rain-on-architectural-shingle-roof-alabama.webp" data-src="/media/rain-on-architectural-shingle-roof-alabama.mp4" aria-label="Rain falling on a charcoal architectural asphalt shingle roof in Alabama"></video>
       </div>
       <div class="storm-copy">
         <span class="storm-eyebrow">Storm Damage?</span>

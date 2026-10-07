@@ -98,3 +98,15 @@ if (lbStage) {
   lbDots.forEach(function (d, n) { d.addEventListener('click', function () { lbSet(n); lbAuto(); }); });
   lbSet(0); lbAuto();
 }
+
+/* Storm section video: load only when scrolled near; poster only for reduced motion / data saver */
+(function () {
+  var v = document.querySelector('video.storm-video[data-src]');
+  if (!v) return;
+  var c = navigator.connection || {};
+  if (c.saveData || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  function go() { v.src = v.dataset.src; v.muted = true; var r = v.play(); if (r && r.catch) r.catch(function () {}); }
+  if (!('IntersectionObserver' in window)) { go(); return; }
+  var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); go(); } }, { rootMargin: '300px 0px' });
+  io.observe(v);
+})();
