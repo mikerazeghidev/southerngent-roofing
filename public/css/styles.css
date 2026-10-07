@@ -821,3 +821,9 @@ body{margin:0}
 #lp-code-1 .mem-lean .mem-bubble::after{left:auto;right:-14px;top:50%;margin-top:-8px;border-top-color:transparent;border-left-color:#0D0B07}
 #lp-code-1 .mem-in:hover .mem-lean .mem-bubble{transform:rotate(-3deg)}
 @media (max-width:900px){#lp-code-1 .mem-in{grid-template-columns:1fr;gap:20px}#lp-code-1 .mem-card-wrap{justify-self:center;margin-top:120px}#lp-code-1 .mem-lean{width:136px;right:12px}#lp-code-1 .mem-lean .mem-bubble{font-size:13px}}
+
+/* Membership v3: bigger vector mascot */
+#lp-code-1 .mem-card-wrap{margin-top:210px}
+#lp-code-1 .mem-lean{width:262px;right:6px;bottom:calc(100% - 7px)}
+#lp-code-1 .mem-lean .mem-bubble{right:88%;bottom:66%;font-size:15px;padding:10px 16px}
+@media (max-width:900px){#lp-code-1 .mem-card-wrap{margin-top:190px}#lp-code-1 .mem-lean{width:214px;right:0}#lp-code-1 .mem-lean .mem-bubble{font-size:13.5px;right:84%}}
