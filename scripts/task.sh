@@ -1,10 +1,9 @@
-# Lookbook + Done Right: new estimate photo with the branded truck; roof-color overlay retraced to the new roof; pins moved
+# Fix stretched photos: images with width/height attributes must keep their aspect ratio when CSS sets width:100%
 set -euo pipefail
 cd "$(dirname "$0")/.."
-[ -s public/images/southerngent-roofing-gutters-estimate-alabama-home-branded-truck.webp ] && { echo 'already applied'; exit 0; }
-curl -fsSL -o /tmp/lb.tgz 'https://unbounce-mcp-uploads-production-002682819933.s3.us-east-1.amazonaws.com/uploads/unbounce%253A181812/2497ba89-604b-4010-91e1-374b7aefeca7/lb.tgz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAQBH7ISVOZ6YK3UKG%2F20261007%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20261007T203311Z&X-Amz-Expires=900&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE0aCXVzLWVhc3QtMSJGMEQCICraqiN3HwlzAO2KuZz8MgyZlDeVAweBrnmkiZDECtP4AiBuAMVabGINswk3C%2BBgMXRXRYi2V2vNZ0MAOuG%2FsHegQyr9AwgWEAAaDDAwMjY4MjgxOTkzMyIMfO5lnz0l%2FHdQSn0yKtoDHk4j%2BSLx%2BJoKCDU61MF4nxi1cKircw2lgsf1nzf7CUMWd1tNX%2FnTe4Y5xLz990LIwnGqEkXDCg7VQV5TN7FF0QS0k%2FZFUuKJcmiGqxjLWzSC9p%2B5Ura6zvbEOrNLkIgpiie%2F561mOM3vWpRmlL2OQ3CXnstkVNsjp%2B7f1yLtBu7Jhw3ozXomLmFzMih9AejrMvHCQjMu33LrAfgWgzZ1KHtlnstkLwpfXjwQt8nsqyCwNEpDwcx7GekNOOQVJ9GKEJX0I9161RaqUMZQxku97dQ6VtvdKFWEzuhBcT%2BVTk3j5SSXukuISexojy0eLFh2CIje9AqdTy3b%2FYiaf71xOZt4Tt2LU%2B59ab9LnXq9OOS2ztNNBdpYuhRCNE5k1rc0J1KZw5c%2B9O3f6Zx4SAbfHCbIz2zaQi52rti7R0c1BuxbJCUzoyvisMG3M6O1t3A%2F22bKqF8XcQUPiQxRw%2BsE1ZM%2BQHTjatbMtMFgM%2BNlkdAyAqyGytNP%2BIyxipR8pa0aYqz7bmYQWxQNza5caZitvYKoxdjHQf2YRzx1O9AtbLuQuA68v8tssdGBcXuTW5O1ut4UX9gnWqcnkqPrzXV5sF2CcquwVS7dU%2B4D%2Bd1V76H%2F3LIme7LQMxFNMOvYmtYGOqMBr0nlG42ZOvsjbuGShXvZ3UItRKQyoVy4FBJWhWgQ5kZi%2F%2Fzs4xH8sgmyihN4xoVbPj2pwb41ShYRZFEJ2XioBwyanAoapi2b38q8XCGNsNUsV1auUi2EsHcJCXR1PY7ZXn9SCsyFmxgs%2FiXsQFXCda%2FHJBQNstGDbNnTi8dGUk8ZMh30VPN044TqFm%2B9XydtmT2ir3SkfxYV0l6xfof0iG6GuQ%3D%3D&X-Amz-Signature=f1ecbf9b20e0f5b966d9d1312756577894d67154728b042cf119b5c1eb465359&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject'
-echo "be2675ad8658fe11af5db427704a020200eb1b719b9abfb8ada79899e83fd3a1  /tmp/lb.tgz" | sha256sum -c -
-tar xzf /tmp/lb.tgz
-# old estimate photo no longer referenced anywhere
-rm -f public/images/southerngent-roofing-estimate-alabama-home.webp
-grep -c 'branded-truck' src/pages/index.astro
+grep -q 'aspect fix (Oct 7, 2026)' public/css/styles.css && { echo 'already applied'; exit 0; }
+cat >> public/css/styles.css <<'EOF'
+/* aspect fix (Oct 7, 2026): images carry width/height attributes for layout stability; keep them proportional */
+#lp-code-1 .lb-stage img, #lp-code-1 .dr-photo>img:first-child{height:auto}
+EOF
+tail -2 public/css/styles.css
