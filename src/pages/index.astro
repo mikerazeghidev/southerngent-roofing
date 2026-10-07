@@ -1,0 +1,438 @@
+---
+// Homepage — ported 1:1 from the Unbounce roofing homepage (variant A), Oct 7, 2026.
+import Base from '../layouts/Base.astro';
+import { INDEX_HERO } from '../data/site';
+---
+<Base
+  title="Roofing, Gutters & Drainage in Huntsville & Birmingham, AL | SouthernGent Roofing & Gutters"
+  description="SouthernGent Roofing & Gutters: roof repair and replacement, seamless gutters, gutter guards and yard drainage for Alabama homes. Licensed, insured, in-house crews serving Huntsville, Birmingham and surrounding communities. Free estimates."
+  ogDescription="Alabama's trusted roofing experts. Roofing, gutters and drainage done clean, done right, built to last. Free estimates in Huntsville and Birmingham."
+  path="/"
+  hero={INDEX_HERO}
+  heroAlt="SouthernGent roofing crew on an Alabama home"
+>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-shade"></div>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">Alabama&#8217;s Trusted Roofing Experts</p>
+        <h1>The Last Roofer<br>You&#8217;ll Ever Call</h1>
+        <p class="hero-sub">Roofing, gutters, and drainage, done clean, done right, and built to last. Licensed Alabama builders with our own crews and a standard your neighbors will notice.</p>
+        <div class="cta-row">
+          <a class="btn btn-blue btn-hero" href="#quote">Get A Free Quote</a>
+          <div class="grating">
+            <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+            <div class="grating-t"><span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><small>Rated 5.0 on Google</small></div>
+          </div>
+        </div>
+        <div class="badges">
+          <img src="/images/five-star-google-rating-badge.webp" alt="5 Star Rating">
+          <img src="/images/bbb-a-plus-rating-badge.webp" alt="BBB A+ Rating">
+          <img src="/images/licensed-insured-alabama-roofer-badge.webp" alt="Licensed and Insured">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- SERVICES -->
+  <section class="services" id="services">
+  <div class="tear tear-hero"><img src="/images/torn-paper-section-divider.webp" alt=""></div>
+    <div class="wrap">
+      <h2 class="h-blue center">Our Services</h2>
+      <p class="section-sub center">We protect the entire exterior, from the roof above to the drainage underneath the ground.</p>
+      <div class="tiles">
+        <a class="tile" href="#quote">
+          <img src="/images/roof-replacement-alabama-home.webp" alt="Roofing">
+          <span class="tile-arrow">&#8599;</span>
+          <span class="tile-label">Roofing<small>Repair, replacement, and storm restoration</small></span>
+        </a>
+        <a class="tile" href="#quote">
+          <img src="/images/seamless-gutter-installation-alabama.webp" alt="Gutters">
+          <span class="tile-arrow">&#8599;</span>
+          <span class="tile-label">Gutters<small>Seamless installs, guards, and cleaning</small></span>
+        </a>
+        <a class="tile" href="#quote">
+          <img src="/images/yard-drainage-solution-alabama.webp" alt="Drainage">
+          <span class="tile-arrow">&#8599;</span>
+          <span class="tile-label">Drainage<small>Surface and underground water solutions</small></span>
+        </a>
+      </div>
+      <div class="benefits">
+        <span class="bene-tab"><svg class="al-tab" viewBox="0 0 26 34" aria-hidden="true"><path fill="currentColor" d="M4.6 1.2 L21.2 1.2 L22.8 21.4 L24.4 26 L20.6 26.2 L20 30 L8 30.4 L7.6 33 L4.8 33 L5.9 27.2 L4.9 14.5 Z"/></svg>The SouthernGent Standard</span>
+        <span class="al-stamp" aria-hidden="true"><svg viewBox="0 0 26 34"><path fill="rgba(243,237,222,.09)" stroke="rgba(243,237,222,.16)" stroke-width=".8" d="M4.6 1.2 L21.2 1.2 L22.8 21.4 L24.4 26 L20.6 26.2 L20 30 L8 30.4 L7.6 33 L4.8 33 L5.9 27.2 L4.9 14.5 Z"/><path fill="rgba(41,166,223,.34)" d="M13.5 9.6 l1.05 2.13 2.35.34-1.7 1.66.4 2.34-2.1-1.1-2.1 1.1.4-2.34-1.7-1.66 2.35-.34z"/></svg></span>
+        <div class="benefit">
+          <span class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.4 8.4a2.1 2.1 0 0 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.9-1.9A2 2 0 0 1 19 8.2V7l-2.3-2.3a6 6 0 0 0-4.2-1.7H9l.9.8A6.2 6.2 0 0 1 12 8.4V10l2 2h1.2a2 2 0 0 1 1.4.6l1.9 1.9"/></svg></span>
+          <div class="b-tx"><h3>Done Right the First Time</h3>
+          <p>No callbacks, no shortcuts. One crew, one visit, done.</p></div>
+        </div>
+        <div class="benefit">
+          <span class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></span>
+          <div class="b-tx"><h3>Respect Your Home</h3>
+          <p>Clean job sites, protected landscaping, and zero mess left behind.</p></div>
+        </div>
+        <div class="benefit">
+          <span class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div class="b-tx"><h3>Local Alabama Experts Since 2004</h3>
+          <p>Your neighbors, your climate, your codes. We know them all.</p></div>
+        </div>
+        <div class="benefit">
+          <span class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <div class="b-tx"><h3>Warranty-Backed Confidence</h3>
+          <p>Workmanship and materials covered in writing.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS BAND -->
+  <section class="revband">
+    <div class="wrap">
+      <div class="greviews">
+        <h2 class="center h-brown revband-h">What Your <span class="h-blue-in">Neighbors</span> Say</h2>
+        <div class="grev-head">
+          <svg viewBox="0 0 48 48" width="26" height="26"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.05 6.05 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.7-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.05 6.05 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.7-.4-3.9z"/></svg>
+          <b>5.0</b>
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="grev-note">Rated by homeowners on Google</span>
+        </div>
+        <div class="grev-scroll"><div class="grev-grid">
+        <div class="grev-card">
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>&#8220;SouthernGent replaced our roof in one day and you could not tell a crew had been here. Cleanest job site I have ever seen.&#8221;</p>
+          <div class="grev-foot"><span class="grev-av">S</span><span class="grev-who"><b>Sarah M.</b><small>Huntsville &#183; Google review</small></span></div>
+        </div>
+        <div class="grev-card">
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>&#8220;They found the drainage issue two other companies missed. Fixed it right the first time and the price was fair.&#8221;</p>
+          <div class="grev-foot"><span class="grev-av">J</span><span class="grev-who"><b>James T.</b><small>Birmingham &#183; Google review</small></span></div>
+        </div>
+        <div class="grev-card">
+          <span class="gstars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>&#8220;From the estimate to the final walkthrough, everything was on time and exactly as promised. True southern service.&#8221;</p>
+          <div class="grev-foot"><span class="grev-av">R</span><span class="grev-who"><b>Rachel W.</b><small>Madison &#183; Google review</small></span></div>
+        </div>
+        </div>
+      </div></div>
+        <div class="grev-nav"><button class="grev-btn" id="grev-prev" type="button" aria-label="Previous reviews">&#8249;</button><button class="grev-btn" id="grev-next" type="button" aria-label="More reviews">&#8250;</button></div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="ba">
+    <div class="wrap">
+      <div class="ba-head center">
+        <h2 class="h-brown">Real Projects. <span class="swoosh-wrap">Real Results.<svg class="swoosh" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 45 3, 118 2, 197 6 L 196 9 C 120 6, 55 8, 5 14 Z" fill="#29A6DF" opacity=".95"/></svg></span></h2>
+        <p class="section-sub">From clogged gutters to full roof transformations, browse recent SouthernGent work from homes across Alabama.</p>
+      </div>
+      <div class="ba-grid">
+        <figure class="ba-card">
+          <div class="ba-shot"><span class="ba-tag ba-before">Before</span><span class="ba-tag ba-after">After</span><img class="ba-slot" src="/images/before-after-gutter-cleaning-huntsville-al.webp" alt="Before and after gutter cleaning"></div>
+          <figcaption><b>Seamless Gutter Renewal</b><span>Huntsville, AL</span></figcaption>
+        </figure>
+        <figure class="ba-card">
+          <div class="ba-shot"><span class="ba-tag ba-before">Before</span><span class="ba-tag ba-after">After</span><img class="ba-slot" src="/images/roof-replacement-project-birmingham-al.webp" alt="Roof replacement project"></div>
+          <figcaption><b>Full Roof Replacement</b><span>Birmingham, AL</span></figcaption>
+        </figure>
+        <figure class="ba-card">
+          <div class="ba-shot"><span class="ba-tag ba-before">Before</span><span class="ba-tag ba-after">After</span><img class="ba-slot" src="/images/yard-drainage-project-madison-al.webp" alt="Drainage project"></div>
+          <figcaption><b>Yard Drainage Solution</b><span>Madison, AL</span></figcaption>
+        </figure>
+      </div>
+      <div class="ba-nav">
+        <button class="ba-btn" id="ba-prev" type="button" aria-label="Previous projects">&#8249;</button>
+        <button class="ba-btn" id="ba-next" type="button" aria-label="More projects">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOF LOOKBOOK -->
+  <section class="lookbook">
+    <div class="wrap">
+      <div class="lb-panel">
+        <div class="lb-copy">
+          <span class="lb-pill">The Roof Lookbook</span>
+          <h2 class="cream-h">Same Home.<br>Whole New Attitude.</h2>
+          <p class="lb-sub">Your roof is half of what the neighborhood sees. Watch one Alabama home try on three different looks, then picture yours. Charcoal, cedar, coastal slate: every style, every color, every budget.</p>
+          <ul class="lb-checks">
+            <li><span class="icon-circle"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2 2 12h3v8h14v-8h3L12 2z"/></svg></span>A dramatic makeover, measured in days</li>
+            <li><span class="icon-circle"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg></span>All roof types, matched to your home and budget</li>
+          </ul>
+          <a class="btn btn-blue" href="#quote">See Your Home&#8217;s New Look</a>
+        </div>
+        <div class="lb-media">
+        <div class="lb-kicker"><span>All Types. Any Budget.</span><em>Dramatic makeovers or dependable basics, priced fair.</em></div>
+        <div class="lb-stage">
+          <img src="/images/southerngent-roofing-estimate-alabama-home.webp" alt="Alabama home shown with three different roof looks">
+          <i class="roof-plane look-b" style="clip-path:polygon(6.81% 29.09%, 15.45% 6.67%, 40.31% 6.67%, 45.81% 19.39%, 52.62% 30.30%);background:#3A3F46"></i><i class="roof-plane look-b" style="clip-path:polygon(0.26% 41.21%, 2.36% 30.91%, 51.57% 30.91%, 53.66% 41.21%);background:#3A3F46"></i><i class="roof-plane look-b" style="clip-path:polygon(16.75% 9.70%, 21.20% 1.21%, 25.92% 9.70%);background:#3A3F46"></i><i class="roof-plane look-b" style="clip-path:polygon(27.75% 9.70%, 32.20% 1.21%, 36.65% 9.70%);background:#3A3F46"></i><i class="roof-plane look-c" style="clip-path:polygon(6.81% 29.09%, 15.45% 6.67%, 40.31% 6.67%, 45.81% 19.39%, 52.62% 30.30%);background:#4A6E8C"></i><i class="roof-plane look-c" style="clip-path:polygon(0.26% 41.21%, 2.36% 30.91%, 51.57% 30.91%, 53.66% 41.21%);background:#4A6E8C"></i><i class="roof-plane look-c" style="clip-path:polygon(16.75% 9.70%, 21.20% 1.21%, 25.92% 9.70%);background:#4A6E8C"></i><i class="roof-plane look-c" style="clip-path:polygon(27.75% 9.70%, 32.20% 1.21%, 36.65% 9.70%);background:#4A6E8C"></i>
+          <span class="lb-label lb-la"><i style="background:#7a5c40"></i>Weathered Cedar</span>
+          <span class="lb-label lb-lb"><i style="background:#3A3F46"></i>Storm Charcoal</span>
+          <span class="lb-label lb-lc"><i style="background:#4A6E8C"></i>Coastal Slate</span>
+        </div>
+        <div class="lb-ctrl">
+          <button class="lb-arrow" id="lb-prev" type="button" aria-label="Previous roof look">&#8249;</button>
+          <span class="lb-dotrow"><button class="lb-dot on" type="button" aria-label="Show Weathered Cedar"></button><button class="lb-dot" type="button" aria-label="Show Storm Charcoal"></button><button class="lb-dot" type="button" aria-label="Show Coastal Slate"></button></span>
+          <button class="lb-arrow" id="lb-next" type="button" aria-label="Next roof look">&#8250;</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORM DAMAGE -->
+  <section class="storm">
+    <div class="wrap storm-in">
+      <div class="storm-photo">
+        <img src="/images/roof-replacement-alabama-home.webp" alt="Alabama roof in a storm">
+        <span class="storm-fx" aria-hidden="true"></span>
+        <span class="storm-mhead" aria-hidden="true"><i>Storm Damage?</i><b>We&#8217;re Here<br>To Help.</b></span>
+      </div>
+      <div class="storm-copy">
+        <span class="storm-eyebrow">Storm Damage?</span>
+        <h2 class="h-brown">We&#8217;re Here To <span class="swoosh-wrap">Help.<svg class="swoosh" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 45 3, 118 2, 197 6 L 196 9 C 120 6, 55 8, 5 14 Z" fill="#29A6DF" opacity=".95"/></svg></span></h2>
+        <p>From emergency roof repairs to insurance claim support, SouthernGent helps Alabama homeowners restore and protect their homes quickly and professionally. We document the damage, work directly with your insurance company, and handle the restoration from tarp to final shingle.</p>
+        <ul class="storm-points">
+          <li>Emergency tarping and rapid repairs</li>
+          <li>Full insurance claim documentation and support</li>
+          <li>Hail, wind, and fallen tree damage restoration</li>
+        </ul>
+        <div class="storm-btns">
+          <a class="btn btn-blue" href="#quote">Get Free Quote</a>
+          <a class="btn btn-outline" href="#services">Explore Roofing Services</a>
+        </div>
+        <p class="storm-local"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span><b>We&#8217;re not storm chasers. We&#8217;re your neighbors.</b> Here before the storm, and still here long after.</span></p>
+      </div>
+    </div>
+  </section>
+  <!-- MEMBERSHIP -->
+  <section class="membership">
+  <div class="tear tear-mem"><img src="/images/torn-paper-section-divider.webp" alt=""></div>
+    <div class="wrap mem-in">
+      <div class="mem-copy">
+        <h2 class="h-blue">Peace Of Mind<br><span class="cream">All Year Round.</span></h2>
+        <p>Elevate your Alabama home's protection with routine roof and gutter maintenance designed to prevent expensive issues before they begin.</p>
+        <ul class="mem-list">
+          <li><span class="icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z"/></svg></span>Bi-Annual Roof &amp; Gutter Inspections</li>
+          <li><span class="icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2 2 7v2h20V7L12 2zm-7 9v8h3v-8H5zm5.5 0v8h3v-8h-3zM16 11v8h3v-8h-3zM2 21v2h20v-2H2z"/></svg></span>Priority Roofing &amp; Gutter Scheduling</li>
+          <li><span class="icon-circle"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-3 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm6 8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-6.9 1L15 8.1 16.4 9.5 7.5 18.4 6.1 17z"/></svg></span>Exclusive Member Savings</li>
+        </ul>
+        <a class="btn btn-ghost" href="#quote">Learn More</a>
+      </div>
+      <div class="mem-gent2">
+        <span class="gent-bubble">Now that&#8217;s a deal!</span>
+        <img class="" src="/images/southerngent-mascot-alabama-roofer.webp" alt="The SouthernGent mascot">
+      </div>
+      <div class="mem-card">
+        <div class="mem-card-head">Join Today For Only</div>
+        <div class="mem-price"><span class="cur">$</span>29<span class="per">/month</span></div>
+        <ul class="mem-checks">
+          <li>Keep your gutters flowing year round</li>
+          <li>Protect your home from water damage</li>
+          <li>Save with member only perks</li>
+        </ul>
+        <a class="btn btn-blue btn-full" href="#quote">Sign Up Today</a>
+      </div>
+    </div>
+    <div class="financing">
+      <div class="wrap">
+        <div class="fin-panel">
+          <p class="fin-head">Financing Options As Low As <span class="swoosh-wrap">$76/Month*<svg class="swoosh" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 45 3, 118 2, 197 6 L 196 9 C 120 6, 55 8, 5 14 Z" fill="#29A6DF" opacity=".95"/></svg></span></p>
+          <p class="fin-sub">Flexible financing options make it easy to get the protection your home needs, today. <a href="#quote">Check your financing options</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="calc">
+    <div class="wrap calc-in">
+      <div class="calc-copy">
+        <h2 class="cream-h">Estimate Your Roofing Project In <span class="swoosh-wrap">Minutes!<svg class="swoosh" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 45 3, 118 2, 197 6 L 196 9 C 120 6, 55 8, 5 14 Z" fill="#FFC42A" opacity=".95"/></svg></span></h2>
+        <p>Curious what a new roof might cost for your Alabama home? Use our easy roofing calculator to get a quick estimate based on your home size, roofing material, and project needs. It's a fast, hassle-free way to plan ahead before speaking with our team.</p>
+        <ul class="calc-points">
+          <li>60-second estimate, no obligation</li>
+          <li>Real Alabama pricing, not national averages</li>
+          <li>Backed by local, in-house crews</li>
+        </ul>
+      </div>
+      <div class="calc-card">
+        <h3>Calculate Your Costs</h3>
+        <label class="calc-label">Home Size:</label>
+        <div class="chips" data-group="size">
+          <button type="button" data-val="1000">1,000</button>
+          <button type="button" data-val="1500" class="on">1,500</button>
+          <button type="button" data-val="2000">2,000</button>
+          <button type="button" data-val="2600">2,500+</button>
+        </div>
+        <div class="calc-cols">
+          <div>
+            <label class="calc-label">Roof Type:</label>
+            <select id="calc-type">
+              <option value="6.0" selected>Asphalt Shingles</option>
+              <option value="7.5">Architectural Shingles</option>
+              <option value="10.5">Metal</option>
+            </select>
+          </div>
+          <div>
+            <label class="calc-label">Home Stories:</label>
+            <div class="chips" data-group="stories">
+              <button type="button" data-val="1">1 Story</button>
+              <button type="button" data-val="1.15" class="on">2+ Stories</button>
+            </div>
+          </div>
+        </div>
+        <label class="calc-label">Roof Complexity:</label>
+        <div class="chips" data-group="complexity">
+          <button type="button" data-val="0.9">Simple</button>
+          <button type="button" data-val="1.1" class="on">Medium</button>
+          <button type="button" data-val="1.35">Complex</button>
+        </div>
+        <div class="calc-result">
+          <span>Estimated Range:</span>
+          <strong id="calc-range">$9,700 - $13,100</strong>
+        </div>
+        <a class="btn btn-blue btn-full" href="#quote">Request My Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SOUTHERNGENT WAY -->
+  <section class="way-alt" id="way">
+    <div class="wrap">
+      <h2 class="center h-brown">The SouthernGent <span class="h-blue-in swoosh-wrap">Way<svg class="swoosh" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 45 3, 118 2, 197 6 L 196 9 C 120 6, 55 8, 5 14 Z" fill="#29A6DF" opacity=".95"/></svg></span></h2>
+      <div class="way-alt-in">
+        <div class="alt-figure">
+          <span class="alt-bub gent-bubble">That&#8217;s the way.</span>
+          <span class="alt-ground" aria-hidden="true"></span>
+          <img class="" src="/images/southerngent-mascot-alabama-roofer.webp" alt="The SouthernGent mascot">
+        </div>
+        <div class="alt-sheetwrap">
+          <span class="alt-tape alt-tape-l" aria-hidden="true"></span><span class="alt-tape alt-tape-r" aria-hidden="true"></span>
+          <div class="alt-sheet">
+        <div class="alt-steps">
+          <div class="alt-step"><span class="alt-badge">1</span><div class="alt-body">
+            <h4>Schedule Your Inspection</h4>
+            <p>We start with a quick call, you'll get a clear time window. We show up when we say we will.</p>
+          </div></div>
+          <div class="alt-step"><span class="alt-badge">2</span><div class="alt-body">
+            <h4>Get a Real Plan</h4>
+            <p>We inspect your home, explain what's actually needed and walk you through your options.</p>
+          </div></div>
+          <div class="alt-step"><span class="alt-badge">3</span><div class="alt-body">
+            <h4>Precision Installation</h4>
+            <p>Our in-house crew handles everything. Clean work, premium materials and attention to detail.</p>
+          </div></div>
+          <div class="alt-step"><span class="alt-badge">4</span><div class="alt-body">
+            <h4>Clean Finish, No Loose Ends</h4>
+            <p>We leave your home better than we found it. A clean job site, final walkthrough and work done right the first time.</p>
+          </div></div>
+        </div>
+        <div class="alt-cta"><a class="btn btn-blue" href="#quote">Get A Free Quote</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="warranty"><span class="warr-head"><img src="/images/southerngent-workmanship-warranty-badge.webp" alt=""></span><span class="warr-line"><svg class="al-mark" viewBox="0 0 26 34" aria-hidden="true"><path fill="currentColor" d="M4.6 1.2 L21.2 1.2 L22.8 21.4 L24.4 26 L20.6 26.2 L20 30 L8 30.4 L7.6 33 L4.8 33 L5.9 27.2 L4.9 14.5 Z"/></svg>Backed By Warranty, Built On Trust.</span></div>
+    </div>
+  </section>
+
+
+  <!-- DONE RIGHT -->
+  <section class="doneright">
+    <div class="wrap dr-in">
+      <div class="dr-copy">
+        <h2 class="cream-h">Done Right.<br>Done Clean.<br>Done Once.</h2>
+        <p class="dr-sub2">Your home deserves more than "good enough". No shortcuts. No mess. No runaround. Just high-end work that looks right and lasts.</p>
+        <span class="reviews-pill"><i class="rp-ic rp-fb">f</i><i class="rp-ic rp-an">A</i><i class="rp-ic rp-gg"><svg viewBox="0 0 48 48" width="14" height="14"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.05 6.05 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.7-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3l5.7-5.7C34.05 6.05 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C36.9 39.2 44 34 44 24c0-1.3-.1-2.7-.4-3.9z"/></svg></i>Over 1,000+ Reviews</span>
+      </div>
+      <div class="dr-photo">
+        <img src="/images/southerngent-roofing-estimate-alabama-home.webp" alt="SouthernGent estimate at an Alabama home">
+        <span class="dr-pin" style="left:31%;top:16%"><i></i>Roofing</span>
+        <span class="dr-pin" style="left:22%;top:36%"><i></i>Gutters</span>
+        <span class="dr-pin" style="left:9%;top:72%"><i></i>Drainage</span>
+        <span class="dr-pin" style="left:64%;top:86%"><i></i>Concrete</span>
+        <span class="dr-gent-wrap"><span class="gent-bubble dr-bubble">Tip of the hat to ya.</span><img class="dr-gent" src="/images/southerngent-mascot-alabama-roofer.webp" alt=""></span>
+      </div>
+    </div>
+  </section>
+
+<!-- SERVICE AREAS -->
+  <section class="areas" id="areas">
+    <div class="wrap areas-panel">
+      <div class="areas-copy">
+        <h3>Premier Roofing &amp; Gutter Services In Huntsville, Birmingham &amp; Across Alabama</h3>
+        <p>SouthernGent delivers elevated roofing and gutter solutions for homeowners throughout Huntsville, Birmingham, and surrounding Alabama communities. Our team combines expert craftsmanship with premium materials to create roofing and gutter systems that are as durable as they are refined.</p>
+        <div class="city-grid">
+          <a href="#quote">Huntsville</a><a href="#quote">Birmingham</a><a href="#quote">Madison</a><a href="#quote">Homewood</a>
+          <a href="#quote">Irondale</a><a href="#quote">Vestavia Hills</a><a href="#quote">Jasper</a><a href="#quote">Meridianville</a>
+        </div>
+      </div>
+      <div class="areas-map"><img src="/images/alabama-roofing-service-area-map-huntsville-birmingham.webp" alt="Alabama service area map"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="h-brown">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span>+</span>Why Choose SouthernGent Roofing &amp; Gutters?</button>
+        <div class="faq-a"><p>We treat your home like our own. Licensed, insured, in-house crews, premium materials, and a clean job site every time. No shortcuts, no runaround, and work that's backed by warranty.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span>+</span>What services are all offered at SouthernGent Roofing &amp; Gutters?</button>
+        <div class="faq-a"><p>Roof repair and replacement, seamless gutter installation, gutter cleaning and repair, gutter guards, and underground drainage. From first install to ongoing maintenance, we cover the full exterior water path.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button"><span>+</span>Does SouthernGent service areas outside of Birmingham?</button>
+        <div class="faq-a"><p>Yes. We serve Huntsville, Birmingham, and surrounding Alabama communities including Madison, Homewood, Vestavia Hills, Irondale, Jasper, and Meridianville.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA / FORM -->
+  <section class="follow">
+    <div class="wrap">
+      <div class="follow-head">
+        <span class="ig-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></span>
+        <h2 class="cream-h">Follow The Gent</h2>
+        <a class="ig-handle" href="https://www.instagram.com/" target="_blank" rel="noopener">@southerngentroofing</a>
+      </div>
+      <div class="ig-grid">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/southerngent-roofing-crew-at-work-alabama-1.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/southerngent-roofing-crew-at-work-alabama-2.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/roof-replacement-project-birmingham-al.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/southerngent-roofing-crew-at-work-alabama-3.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/yard-drainage-project-madison-al.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener"><img src="/images/southerngent-roofing-crew-at-work-alabama-4.webp" alt="SouthernGent on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="cta-final" id="quote">
+    <div class="wrap cta-in">
+      <figure class="cta-person" aria-hidden="true"><img src="/images/southerngent-roofer-free-estimate.webp" alt=""></figure>
+      <div class="cta-copy">
+        <h2 class="cream-h">Start Your <em class="gold-em">Free</em> Estimate Today</h2>
+        <p class="cta-sub">Fast. Easy. No pressure. Tell us where to reach you and a SouthernGent handles the rest.</p>
+        <ul class="cta-checks">
+          <li>Free on-site inspection and written quote</li>
+          <li>Licensed, insured, and warranty-backed</li>
+          <li>Clean job sites and clear communication</li>
+        </ul>
+        <p class="cta-phone">Prefer to talk? <a href="tel:+15555555555">(555)555-5555</a></p>
+      </div>
+      <div class="lead-card">
+        <form class="lead-form"><input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <input type="text" name="zip_code" placeholder="Zipcode" required>
+          <label class="lead-consent"><input type="checkbox" name="sms_consent" value="yes" checked><span>By checking this box, you agree to receive calls and text messages from SouthernGent Roofing &amp; Gutters at the number provided, including messages sent by autodialer or prerecorded voice. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.</span></label>
+          <button type="submit" class="btn btn-blue btn-full">Request My Free Quote</button>
+        </form>
+        <div class="lead-thanks" hidden>
+          <p><b>Request received.</b></p>
+          <p>A SouthernGent will reach out shortly to schedule your free estimate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  </Base>
