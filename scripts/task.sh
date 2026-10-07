@@ -1,6 +1,9 @@
-# Fix styles.css: remove the leftover Google Fonts @import fragment on line 1 that broke the :root color variables
+# Copy the SouthernGent favicon set into this repo (one-time copy; served from this domain afterwards)
 set -euo pipefail
 cd "$(dirname "$0")/.."
-sed -i '1{/^700;800&family=/d}' public/css/styles.css
-head -c 60 public/css/styles.css; echo
-grep -c 'googleapis' public/css/styles.css && { echo 'import fragment still present'; exit 1; } || true
+mkdir -p public/images
+get() { [ -s "$2" ] && { echo "skip $2"; return; }; curl -fsSL -o "$2" "https://www.southerngentconstruction.com/$1"; echo "ok $2 $(wc -c < "$2")"; }
+get favicon.ico public/favicon.ico
+get images/icon-192.png public/images/icon-192.png
+get images/icon-512.png public/images/icon-512.png
+get images/apple-touch-icon.png public/images/apple-touch-icon.png
