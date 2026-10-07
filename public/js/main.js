@@ -40,19 +40,14 @@ document.querySelectorAll('.faq-q').forEach(function (q) {
   });
 });
 
-/* Before/after project cycler: rotates the pool through the three cards */
-var baImgs = Array.prototype.map.call(document.querySelectorAll('.ba-slot'), function (el) { return el.src; });
-var baIdx = 0;
-function baShow(d) {
-  baIdx = (baIdx + d + baImgs.length) % baImgs.length;
-  var slots = document.querySelectorAll('.ba-slot');
-  slots.forEach(function (el, i) {
-    el.src = baImgs[(baIdx + i) % baImgs.length];
-  });
-}
-var bp = document.getElementById('ba-prev'), bn = document.getElementById('ba-next');
-if (bp) bp.addEventListener('click', function(){ baShow(-1); });
-if (bn) bn.addEventListener('click', function(){ baShow(1); });
+/* Before/after compare sliders */
+document.querySelectorAll('.ba-cmp').forEach(function (box) {
+  var r = box.querySelector('.ba-range');
+  if (!r) return;
+  var set = function () { box.style.setProperty('--pos', r.value + '%'); };
+  r.addEventListener('input', set);
+  set();
+});
 
 /* Lead forms: submit -> webhook (+ dataLayer) -> thank-you panel (every .lead-form on the page).
    TODO: point WEBHOOK_URL at the CRM webhook before campaign launch. */
