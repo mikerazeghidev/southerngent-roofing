@@ -784,13 +784,10 @@ body{margin:0}
 @media (max-width:980px){#lp-code-1 .hero h1{font-size:46px}#lp-code-1 .hero{padding:48px 0 120px}}
 @media (max-width:560px){#lp-code-1 .hero h1{font-size:36px}#lp-code-1 .hero{padding:36px 0 96px}#lp-code-1 .hero .badges img{height:48px}}
 
-/* Before/after compare sliders (Oct 7, 2026): real before + after photos, drag to reveal */
-#lp-code-1 .ba-cmp{position:relative;height:250px;overflow:hidden;user-select:none;--pos:50%}
-#lp-code-1 .ba-cmp .ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-#lp-code-1 .ba-top{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 0 0 var(--pos))}
-#lp-code-1 .ba-cmp .ba-before{left:10px;right:auto}
-#lp-code-1 .ba-cmp .ba-after{left:auto;right:10px;top:10px;bottom:auto}
-#lp-code-1 .ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4;-webkit-appearance:none;appearance:none}
-#lp-code-1 .ba-handle{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25);z-index:3;pointer-events:none}
-#lp-code-1 .ba-handle::after{content:'\2039\2003\203A';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#fff;color:#1a0f07;font-family:Arial,sans-serif;font-size:20px;line-height:40px;text-align:center;letter-spacing:-2px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
-#lp-code-1 .ba-card:hover{transform:none}
+/* Before/after pairs (Oct 7, 2026): side-by-side before + after photos per project */
+#lp-code-1 .ba-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#fff}
+#lp-code-1 .ba-half{position:relative}
+#lp-code-1 .ba-pair img{width:100%;height:220px;object-fit:cover;display:block}
+#lp-code-1 .ba-pair .ba-tag{left:8px;top:8px;bottom:auto;transform:none}
+#lp-code-1 .ba-half:first-child img{filter:brightness(.9) saturate(.85)}
+#lp-code-1 .ba-half:first-child::after{content:"";position:absolute;inset:0;background:rgba(20,12,6,.1);pointer-events:none}

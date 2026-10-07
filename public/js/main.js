@@ -40,15 +40,6 @@ document.querySelectorAll('.faq-q').forEach(function (q) {
   });
 });
 
-/* Before/after compare sliders */
-document.querySelectorAll('.ba-cmp').forEach(function (box) {
-  var r = box.querySelector('.ba-range');
-  if (!r) return;
-  var set = function () { box.style.setProperty('--pos', r.value + '%'); };
-  r.addEventListener('input', set);
-  set();
-});
-
 /* Lead forms: submit -> webhook (+ dataLayer) -> thank-you panel (every .lead-form on the page).
    TODO: point WEBHOOK_URL at the CRM webhook before campaign launch. */
 (function () {
