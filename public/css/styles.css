@@ -878,3 +878,10 @@ body{margin:0}
   #lp-code-1 .m2-fin-copy{border:0;padding:0}
   #lp-code-1 .m2-fin-btn{justify-content:center}
 }
+/* Storm -> Membership seam (Oct 9, 2026): cream storm section paints over the membership overlap; the solid band of the torn
+   leather strip sits exactly on the storm's bottom edge, so the torn edge cuts into cream and the strip's fade melts into the leather */
+#lp-code-1 .storm{position:relative;z-index:1}
+#lp-code-1 .tear img{max-width:none}
+#lp-code-1 .tear-mem{margin-top:calc(-54px - 3.25vw)}
+@media (max-width:980px){#lp-code-1 .tear-mem{margin-top:calc(-54px - 6.5vw)}}
+@media (max-width:760px){#lp-code-1 .tear-mem{margin-top:calc(8px - 9.1vw)}}
