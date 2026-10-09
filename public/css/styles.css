@@ -885,9 +885,9 @@ body{margin:0}
 #lp-code-1 .tear-mem{margin-top:calc(-54px - 3.25vw)}
 @media (max-width:980px){#lp-code-1 .tear-mem{margin-top:calc(-54px - 6.5vw)}}
 @media (max-width:760px){#lp-code-1 .tear-mem{margin-top:calc(8px - 9.1vw)}}
-/* Hero -> Services seam (Oct 9, 2026): hard-edged leather ribbon, no fade into cream.
-   Seam (hero bottom) sits at row 58 of 116 in the strip, inside the solid band. */
-#lp-code-1 .tear-hero{margin-top:-3.02vw;margin-bottom:1.66vw}
-#lp-code-1 .tear-hero img{height:auto}
-@media (max-width:980px){#lp-code-1 .tear-hero{margin-top:-6.04vw;margin-bottom:3.3vw}}
-@media (max-width:760px){#lp-code-1 .tear-hero{margin-top:-8.46vw;margin-bottom:5.4vw}}
+/* Hero -> Services seam (Oct 9, 2026): torn ribbon in the SAME leather + tint as the nav banner,
+   cut out with an alpha mask (hard edges, no fade). Seam sits at 50% of the ribbon height. */
+#lp-code-1 .tear-hero{margin-top:-3.02vw;margin-bottom:1.66vw;filter:drop-shadow(0 2px 3px rgba(30,14,5,.35))}
+#lp-code-1 .tear-hero .ribbon{display:block;width:100%;aspect-ratio:1920/116;background:linear-gradient(180deg,rgba(28,13,5,.42),rgba(24,11,4,.5)),url('/images/leather-texture-background.webp') 0 0/860px auto;-webkit-mask:url('/images/torn-edge-ribbon-mask.webp') 0 0/100% 100% no-repeat;mask:url('/images/torn-edge-ribbon-mask.webp') 0 0/100% 100% no-repeat}
+@media (max-width:980px){#lp-code-1 .tear-hero{margin-top:-6.04vw;margin-bottom:3.3vw}#lp-code-1 .tear-hero .ribbon{width:200%;margin-left:-50%}}
+@media (max-width:760px){#lp-code-1 .tear-hero{margin-top:-8.46vw;margin-bottom:5.4vw}#lp-code-1 .tear-hero .ribbon{width:280%;margin-left:-90%}}
